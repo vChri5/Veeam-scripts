@@ -1,6 +1,6 @@
 # Restore a specified SQL database to a specified folder on the same or different server, rename it, add it to an availability group.
 # Used, for exemple, to "restage" the prod database to DEV/Qual
-# Created by Christian Bocquet - https://www.linkedin.com/in/vchris/ and updated on 11.07.2022
+# Created by Christian Bocquet - https://www.linkedin.com/in/vchris/ https://github.com/vChri5 and updated on 11.07.2022
 # V3 for V11 and improvments, handling multiple NDF files
 ######################################################################################################
 ######################################################################################################
