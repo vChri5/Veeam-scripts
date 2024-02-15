@@ -1,0 +1,22 @@
+445
+135
+
+TCP
+
+2500 to 3300
+
+Default range of ports used as transmission channels for log shipping.
+
+Note: This range of ports applies to newly installed Veeam Backup & Replication starting from version 10.0, without upgrade from previous versions. If you have upgraded from an earlier version of the product, the range of ports from 2500 to 5000 applies to the already added components.
+
+TCP
+
+49152 to 65535
+
+For persistent agent MS:
+New-NetFirewallRule -DisplayName "Veeam TCP Required Port" -Direction inbound -Profile Any -Action Allow -LocalPort 2500,6160,6173,11731 -Protocol TCP -RemoteAddress "192.168.161.100-192.168.161.105"
+
+https://forums.veeam.com/veeam-backup-replication-f2/veeam-installer-service-silent-install-t77630.html
+
+
+msiexec.exe /qn /i "\\cbo-lab-dc01\sources\VeeamInstallerSvc.msi" ACCEPTEULA="1" ACCEPT_THIRDPARTY_LICENSES="1"
