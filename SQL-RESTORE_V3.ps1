@@ -33,7 +33,7 @@ $vartarget_mdf		    				= "{0}{1}{2}" -f $vartarget_foldermdf, $vartarget_databa
 $vartarget_ldf		    				= "{0}{1}{2}" -f $vartarget_folderldf, $vartarget_database,".ldf"
 ######################################################################################################
 #Get the latest restore point for the selected VM and start a restore session
-$varrestorepoint        				= Get-VBRApplicationRestorePoint -SQL | ? Name -match "^$varsource_vm" | Sort-Object –Property CreationTime –Descending | Select -First 1
+$varrestorepoint        				= Get-VBRApplicationRestorePoint -SQL | Where-Object Name -match "^$varsource_vm" | Sort-Object –Property CreationTime –Descending | Select-Object -First 1
 Start-VESQLRestoreSession -RestorePoint $varrestorepoint
 ######################################################################################################
 #Get the restore session running
