@@ -2,4 +2,10 @@ SRENVPXR301.adi.adies.lan Rennaz
 sfhvvbrc01.adi.adies.lan VBR
 sfhvvone01.adi.adies.lan VeeamOne
 rendd01m.adi.adies.lan,  10.13.39.23 Datadomain
+sfhvvci05.adi.adies.lan
+
+Si rebalance
+43.45 chaque extends
+
+Get-WmiObject -Namespace "root\VeeamBS" -Class "BackupServer" -Impersonation 3 -Authentication 6 -ComputerName "sfhvvbr01.adi.adies.lan" -Credential ` "SFHVVBR01\svcveeamloc" | select *
 
